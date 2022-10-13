@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getAllStarships } from "../../services/sw-api";
 
 const StarshipList = (props) => {
+  const [totalPages, setTotalPages] = useState(0);
   const [starships, setStarships] = useState([]);
 
   useEffect(() => {

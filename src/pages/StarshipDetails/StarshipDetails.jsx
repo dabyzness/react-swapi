@@ -19,13 +19,12 @@ const StarshipDetails = (props) => {
     <>
       <div>
         {details.name ? (
-          <div>
+          <div style={{ textAlign: "center" }}>
             <h1>{details.name}</h1>
             <h2>{details.model}</h2>
             <h3>{details.manufacturer}</h3>
-            <ul>
-              <li>Cost: {details.cost_in_credits}</li>
-            </ul>
+
+            <p>Cost: {details.cost_in_credits}</p>
           </div>
         ) : (
           <div>Is Loading</div>

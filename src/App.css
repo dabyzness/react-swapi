@@ -15,13 +15,51 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(150%);
+}
+
+a:visited {
+  text-decoration: underline;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  margin: 1rem auto;
+  list-style: none;
+  width: 200px;
+}
+
+ul > a {
+  width: 200px;
+}
+
+li {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+
+  color: black;
+  text-decoration: underline;
+  margin: 1rem auto;
+}
+
+li:hover {
+  transform: scale(110%);
 }
 
 .App-link {

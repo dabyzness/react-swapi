@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import StarshipList from "./pages/starshipList/StarshipList";
-import StarshipDetails from "./pages/starshipList/StarshipDetails";
+import StarshipList from "./pages/StarshipList/StarshipList";
+import StarshipDetails from "./pages/StarshipDetails/StarshipDetails";
 
 function App() {
   return (
