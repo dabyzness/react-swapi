@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { getAllStarships } from "../../services/sw-api";
 
 const StarshipList = (props) => {
@@ -34,6 +35,7 @@ const StarshipList = (props) => {
     fetchData();
   }, []);
 
+  // Delete Copies
   // useEffect(() => {
   //   const copy = [...starships];
   //   const indexArr = [];
@@ -48,7 +50,19 @@ const StarshipList = (props) => {
 
   return (
     <>
-      <div>{starships.length ? starships.length : "I'm LOADING"}</div>
+      <div>
+        {starships.length ? (
+          <ul>
+            {starships.map((starship, i) => (
+              <Link key={`starship-${i}`} state={{ starship }} to="/starship">
+                <li>{starship.name}</li>
+              </Link>
+            ))}
+          </ul>
+        ) : (
+          "I'm LOADING"
+        )}
+      </div>
     </>
   );
 };
